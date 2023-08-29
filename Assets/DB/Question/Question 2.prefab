@@ -44,13 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632212aac26d14243ba2e48af157c1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Test
+  text: "\xBFQu\xE9 es el software en programaci\xF3n?"
   options:
-  - text: No
+  - text: A) Es un conjunto de herramientas que permiten el desarrollo de aplicaciones
+      de software
     correct: 0
-  - text: No
+  - text: B) Es un programa
     correct: 0
-  - text: Si
+  - text: C) Es un lenguaje
+    correct: 0
+  - text: "D) Es una aplicaci\xF3n"
     correct: 1
-  - text: No
-    correct: 0

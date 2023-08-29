@@ -44,13 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632212aac26d14243ba2e48af157c1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Test
+  text: "\xBFQu\xE9 es un bucle o ciclo?"
   options:
-  - text: No
+  - text: A) Un programa
     correct: 0
-  - text: No
+  - text: B) Una sentencia que ejecuta otra sentencia que a su vez ejecuta la primera
+      sentencia
     correct: 0
-  - text: Si
+  - text: D) Un problema infinito
+    correct: 0
+  - text: "C) Una sentencia que permite ejecutar un bloque aislado de c\xF3digo varias
+      veces hasta que se cumpla (o deje de cumplirse) la condici\xF3n asignada al
+      bucle"
     correct: 1
-  - text: No
-    correct: 0

@@ -44,13 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632212aac26d14243ba2e48af157c1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Test
+  text: "\xBFCual es correcta?"
   options:
-  - text: No
+  - text: Esta no
     correct: 0
-  - text: No
-    correct: 0
-  - text: Si
+  - text: Esta Si
     correct: 1
-  - text: No
+  - text: Esta no
     correct: 0
+  - text: Esta si
+    correct: 1
