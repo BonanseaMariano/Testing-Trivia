@@ -16,6 +16,7 @@ public class QuizDB : MonoBehaviour
 
     public Question GetRandom(bool remove = true)
     {
+        //Ya se agotaron las pregintas, aca es un posible lugar para la funcion GameOver
         if(m_questionList.Count == 0)
             RestoreBackup();
 

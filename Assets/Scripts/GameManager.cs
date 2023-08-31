@@ -44,12 +44,14 @@ public class GameManager : MonoBehaviour
         m_audioSource.clip = optionButton.Option.correct ? m_correctSound : m_incorrectSound;
         optionButton.SetColor(optionButton.Option.correct ? m_correctColor : m_incorrectColor);
         m_audioSource.Play();
+        //Por aca seria donde hay que preguntar si selecciono la respuesta correcta o no para lo del puntaje
+
 
         yield return new WaitForSeconds(m_waitTime);
         NextQuestion();
     }
 
-    //Para configurar el final del juego (hay que ver cuando se lo quiere llamar)
+    //Para configurar el final del juego (hay que ver cuando se lo quiere llamar en QuizDB es un posible lugar)
     private void GameOver()
     {
         SceneManager.LoadScene(0);
