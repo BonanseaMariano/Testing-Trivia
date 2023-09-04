@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class GameManager : MonoBehaviour
@@ -15,6 +14,7 @@ public class GameManager : MonoBehaviour
     private QuizDB m_quizDB = null;
     private QuizUI m_quizUI = null;
     private AudioSource m_audioSource = null;
+    public int puntos = 0;
 
     private void Start()
     {
@@ -45,15 +45,10 @@ public class GameManager : MonoBehaviour
         optionButton.SetColor(optionButton.Option.correct ? m_correctColor : m_incorrectColor);
         m_audioSource.Play();
         //Por aca seria donde hay que preguntar si selecciono la respuesta correcta o no para lo del puntaje
-
+        if (optionButton.Option.correct)
+            puntos++;
 
         yield return new WaitForSeconds(m_waitTime);
         NextQuestion();
-    }
-
-    //Para configurar el final del juego (hay que ver cuando se lo quiere llamar en QuizDB es un posible lugar)
-    private void GameOver()
-    {
-        SceneManager.LoadScene(0);
     }
 }
