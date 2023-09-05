@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        ScoreManager.GetInstance().Puntos = 0;
         m_quizDB = GameObject.FindObjectOfType<QuizDB>();
         m_quizUI = GameObject.FindObjectOfType<QuizUI>();
         m_audioSource = GetComponent<AudioSource>();
@@ -46,7 +47,11 @@ public class GameManager : MonoBehaviour
         m_audioSource.Play();
         //Por aca seria donde hay que preguntar si selecciono la respuesta correcta o no para lo del puntaje
         if (optionButton.Option.correct)
+        {
             puntos++;
+            ScoreManager.GetInstance().Puntos++;
+        }
+            
 
         yield return new WaitForSeconds(m_waitTime);
         NextQuestion();
